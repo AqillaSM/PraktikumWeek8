@@ -37,7 +37,7 @@ namespace PraktikumWeek8
             sqlQuery = "SELECT team_name as 'Nama Tim', manager_name as 'Nama Manager', player_name as 'Nama Captain', capacity, home_stadium, city FROM manager, team, player WHERE team.manager_id = manager.manager_id and player.player_id = team.captain_id";
             sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
             sqlAdapter = new MySqlDataAdapter(sqlCommand);
-            sqlAdapter.Fill(dtPlayerTM); // sampai sini
+            sqlAdapter.Fill(dtPlayerTM);
             ComboBoxTM.DataSource = dtPlayerTM;
             ComboBoxTM.DisplayMember = "Nama Tim";
 
